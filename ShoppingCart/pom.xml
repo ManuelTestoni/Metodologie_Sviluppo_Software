@@ -7,9 +7,61 @@
     <artifactId>shopping-cart</artifactId>
     <version>1.0-SNAPSHOT</version>
     
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.release>21</maven.compiler.release>
+    </properties>
+    
     <build>
         <sourceDirectory>.</sourceDirectory>
         <testSourceDirectory>.</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <executions>
+                    <!-- Compilazione codice main: esclude i file di test -->
+                    <execution>
+                        <id>default-compile</id>
+                        <configuration>
+                            <excludes>
+                                <exclude>**/*Test.java</exclude>
+                                <exclude>**/*Tester.java</exclude>
+                                <exclude>**/*Tests.java</exclude>
+                                <exclude>**/*TestCase.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                    <!-- Compilazione test: include solo i file di test -->
+                    <execution>
+                        <id>default-testCompile</id>
+                        <configuration>
+                            <includes>
+                                <include>**/*Test.java</include>
+                                <include>**/*Tester.java</include>
+                                <include>**/*Tests.java</include>
+                                <include>**/*TestCase.java</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                        <include>**/*Tester.java</include>
+                        <include>**/*Tests.java</include>
+                        <include>**/*TestCase.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
     
     <dependencies>
