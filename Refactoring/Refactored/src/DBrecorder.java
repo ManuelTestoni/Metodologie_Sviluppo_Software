@@ -9,9 +9,8 @@ public class DBrecorder {
 
 		// Usiamo strutture dati dinamiche quali array list con generics.
 		
-		ArrayList <String> keys[] = new ArrayList<>();
-		ArrayList <String> values[] =  new ArrayList<>();
-		int cont = 0;
+		ArrayList<String> keys = new ArrayList<>();
+		ArrayList<String> values = new ArrayList<>();
 		
 		/* reading phase */
 		
@@ -65,6 +64,7 @@ public class DBrecorder {
 		/* recording phase */
 
 		//Valori hardocded del database, solitamente in produzione non si fa così.
+		//Andrebbe fatto un file di configurazione o usare variabili d'ambiente.
 		String urlDB="jdbc:sqlite:db1.db";
 		String user="mas";
 		String pwd="mas";
@@ -87,10 +87,10 @@ public class DBrecorder {
 
 			/* add the couples to the DB */
 			con = DriverManager.getConnection(urlDB, user, pwd);
-			
-			for (int i=0; i< cont; i++) {
+			//Qui si potrebbe fare un metodo per fare query SQL. 
+			for (int i = 0; i <keys.size(); i++) {
 				/* SQL command */
-				stringSql = "INSERT INTO tab1 VALUES (\""+keys[i]+"\", \""+values[i]+"\");";
+				stringSql = "INSERT INTO tab1 VALUES (\"" + keys.get(i) + "\", \"" + values.get(i) + "\");";
 				System.out.println(stringSql);
 				stmt = con.createStatement();
 				res = stmt.executeUpdate(stringSql);
@@ -105,14 +105,12 @@ public class DBrecorder {
 
 	}
 
-	public static void performRead( BufferedReader br, ArrayList<String> keys[],ArrayList<String> values[]) {
+	public static void performRead(BufferedReader br, ArrayList<String> keys, ArrayList<String> values) throws IOException {
 		String line;
-		int cont = 0;
-		while((line = br.readLine()) != null){
-					keys[cont] = line.substring(0, line.indexOf(' '));
-					values[cont] = line.substring(line.indexOf(' ')+1);
-					cont++;
-				}
+		while ((line = br.readLine()) != null) {
+			keys.add(line.substring(0, line.indexOf(' ')));
+			values.add(line.substring(line.indexOf(' ') + 1));
+		}
 	}
 
 	public static void openingErrorDetection(IOException e, String source) {
