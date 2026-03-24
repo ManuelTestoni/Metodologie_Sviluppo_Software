@@ -1,5 +1,4 @@
-@author Manuel Testoni
-@author Simone
+//Authors: Manuel Testoni, Simone
 
 
 import org.junit.jupiter.api.Test;
