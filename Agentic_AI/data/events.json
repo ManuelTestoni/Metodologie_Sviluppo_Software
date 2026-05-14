@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Demo Night: Agenti AI per la Città",
+    "date": "2026-05-04",
+    "time": "18:00",
+    "location": "Aula-Magna",
+    "tags": [
+      "agenti",
+      "demo",
+      "citta",
+      "pitch"
+    ]
+  },
+  {
+    "name": "AI Escape Room: Debugga l'Agente",
+    "date": "2026-05-06",
+    "time": "16:00",
+    "location": "Lab-Blue",
+    "tags": [
+      "debug",
+      "agentic ai",
+      "gioco",
+      "lab"
+    ]
+  },
+  {
+    "name": "Clinic Portfolio e CV Tech",
+    "date": "2026-05-07",
+    "time": "15:00",
+    "location": "A115",
+    "tags": [
+      "portfolio",
+      "cv",
+      "career",
+      "progetti"
+    ]
+  },
+  {
+    "name": "Workshop Test di Software con Pizza Review",
+    "date": "2026-05-08",
+    "time": "11:00",
+    "location": "C210",
+    "tags": [
+      "testing",
+      "software engineering",
+      "workshop",
+      "pizza review"
+    ]
+  }
+]

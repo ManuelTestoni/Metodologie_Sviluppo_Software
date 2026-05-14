@@ -1,0 +1,8 @@
+jupyter
+ipykernel
+python-dotenv
+pandas
+pydantic>=2
+langchain
+langgraph
+langchain-ollama

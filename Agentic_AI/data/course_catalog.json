@@ -1,0 +1,93 @@
+[
+  {
+    "code": "AI301",
+    "title": "Sistemi Agentici per il Campus",
+    "instructor": "Dr.ssa Sofia Bianchi",
+    "meeting_times": [
+      "Mon 10:00-12:00",
+      "Wed 10:00-11:00"
+    ],
+    "room": "A201",
+    "keywords": [
+      "agenti",
+      "llm",
+      "langgraph",
+      "strumenti",
+      "tool use",
+      "planning",
+      "campus"
+    ],
+    "description": "Progetti pratici con agenti LLM che usano strumenti, memoria e grafi per risolvere problemi reali del campus."
+  },
+  {
+    "code": "ML210",
+    "title": "Machine Learning sul Campo",
+    "instructor": "Prof. Luca Ferri",
+    "meeting_times": [
+      "Tue 09:00-11:00"
+    ],
+    "room": "B110",
+    "keywords": [
+      "classificazione",
+      "valutazione",
+      "python",
+      "scikit",
+      "esperimenti"
+    ],
+    "description": "Laboratorio su esperimenti ML, metriche, error analysis e prototipi con dati rumorosi ma realistici."
+  },
+  {
+    "code": "SE220",
+    "title": "Software Lab: Git, Test e Deploy",
+    "instructor": "Dr.ssa Elena Rossi",
+    "meeting_times": [
+      "Wed 10:00-12:00"
+    ],
+    "room": "C210",
+    "keywords": [
+      "testing",
+      "git",
+      "ci",
+      "deploy",
+      "requisiti",
+      "team"
+    ],
+    "description": "Sviluppo collaborativo con test automatici, pull request, integrazione continua e demo di fine sprint."
+  },
+  {
+    "code": "NLP250",
+    "title": "NLP e Assistenti Conversazionali",
+    "instructor": "Prof.ssa Marta Conti",
+    "meeting_times": [
+      "Thu 14:00-16:00"
+    ],
+    "room": "A115",
+    "keywords": [
+      "nlp",
+      "prompting",
+      "embedding",
+      "retrieval",
+      "chatbot",
+      "italiano"
+    ],
+    "description": "Costruzione di chatbot in italiano con retrieval, prompt design, valutazione e attenzione alle allucinazioni."
+  },
+  {
+    "code": "DS105",
+    "title": "Data Storytelling per AI",
+    "instructor": "Dr. Paolo Greco",
+    "meeting_times": [
+      "Fri 09:00-11:00"
+    ],
+    "room": "Lab-Blue",
+    "keywords": [
+      "data cleaning",
+      "pandas",
+      "visualizzazione",
+      "csv",
+      "storytelling",
+      "dashboard"
+    ],
+    "description": "Pulizia dati, visualizzazione e racconto dei risultati per trasformare dataset grezzi in decisioni comprensibili."
+  }
+]
